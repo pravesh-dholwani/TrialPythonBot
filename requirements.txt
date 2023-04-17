@@ -1,2 +1,2 @@
 pyTelegramBotApi
-python-telegram-bot
+python-telegram-bot==12.0
