@@ -11,19 +11,16 @@
 
 # @bot.message_handler(func=lambda msg:True)
 # def send_to_sender(message):
-#     bot.reply_to(message , message.from_user.username)
 #     bot.reply_to(message , message.text)
 
 # bot.infinity_polling()
-
-
 
 import os
 import telegram
 from telegram.ext import CommandHandler, MessageHandler, Filters, Updater
 
-# TOKEN = os.environ['TELEGRAM_TOKEN']
-bot = telegram.Bot(token="6245614297:AAHSK1fRtjevCo3WnsIQamGEBCX-2vAYQsA")
+TOKEN = "6245614297:AAHSK1fRtjevCo3WnsIQamGEBCX-2vAYQsA"
+bot = telegram.Bot(token=TOKEN)
 
 def start(update, context):
     context.bot.send_message(chat_id=update.message.chat_id, text="Hello, I'm a bot!")
@@ -38,4 +35,3 @@ dispatcher.add_handler(MessageHandler(Filters.text, echo))
 
 updater.start_polling()
 updater.idle()
-
